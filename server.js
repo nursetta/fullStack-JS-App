@@ -42,6 +42,16 @@ var db = require('./models/');
 		            return console.log("post error: " + err);
 		        }
 	});
+});
+
+	app.delete('/api/todo/:id', function (req, res) {
+	var todoId = req.params.id;
+	db.Todo.findOneAndRemove({_id: todoId }, function(err, deleteTodo) {
+         if (err){
+            return console.log("index error: " + err);
+        }
+          res.json(deleteTodo);
+	});
 });	
 
 	

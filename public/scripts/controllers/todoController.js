@@ -30,6 +30,12 @@ angular.module('TodoList')
 .controller('TodoShowCtrl', function ($scope, TodoService, $routeParams) {
    $scope.todo = TodoService.get({id: $routeParams.id});
    console.log($scope.todo);
+
+        $scope.delete = function() {
+          TodoService.delete({id: $routeParams.id});
+          console.log({id: $routeParams.id});
+          window.location.assign('/');
+        };
 });
 
 angular.module('TodoList')
@@ -41,4 +47,12 @@ angular.module('TodoList')
         window.location.assign('/');
         };
 });
+
+// angular.module('TodoList')
+// .controller('TodoDeleteCtrl', function($scope, TodoService) {
+//       $scope.delete = function() {
+//         TodoService.remove($scope.delete);
+//         window.location.assign('/');
+//         };
+// });
 
