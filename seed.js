@@ -1,43 +1,30 @@
 var db = require('./models');
 
-var cards = [
+var todos= [
   {
-  question: "What is your name?",
-  answer: "Nick",
-  answerHidden: "true",
+  todoItem: "Clean the House",
 },
   {
-  question: "What is your name?",
-  answer: "Nick",
-  answerHidden: "true",
+  todoItem: "Do Laundry",
 },
   {
-  question: "What is your name?",
-  answer: "Nick",
-  answerHidden: "true",
+  todoItem: "Wash car",
 },
   {
-  question: "What is your name?",
-  answer: "Nick",
-  answerHidden: "true",
-},
-  {
-  question: "What is your name?",
-  answer: "Nick",
-  answerHidden: "true",
+  todoItem: "Go to the Gym",
 }
 
 ];
 
-db.Card.remove({}, function(err, movies){
+db.Todo.remove({}, function(err, movies){
 	if (err) { return console.log ('err', err); 
 	} else {
-		console.log('removed all cards');
+		console.log('removed all items');
 
-	db.Card.create(cards, function (err, movies){
+	db.Todo.create(todos, function (err, movies){
 		if (err) { return console.log ('error:', err);
 	}
-		console.log("created", cards.length, "favorite movies");
+		console.log("created", todos.length, "items");
 		process.exit();
 		});
 	}

@@ -1,1 +1,1 @@
-var app = angular.module( 'CardsAgainstAssembly', [ 'ngRoute', 'ngResource' ] );
+var app = angular.module( 'TodoList', [ 'ngRoute', 'ngResource' ] );
