@@ -54,7 +54,17 @@ var db = require('./models/');
 	});
 });	
 
-	
+// 	app.put('/api/todo/:id', function (req, res) {
+// 	var todoId = req.params.id;
+// 	var todo = req.body;
+// 	db.Todo.findByIdAndUpdate(todoId, todo, {new: true}, function(err, updateTodo) {
+//          if (err){
+//             return console.log("index error: " + err);
+//         }
+//           res.json(updateTodo);
+// 	});
+// });	
+
 	app.listen(process.env.PORT || 3000, function () {
 	  console.log('Express server is up and running on http://localhost:3000/');
 	});
