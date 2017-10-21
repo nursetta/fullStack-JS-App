@@ -1,36 +1,170 @@
  <!DOCTYPE html>
-<html lang="en" ng-app="TodoList">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ToDo List</title>
-        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-        <link rel="stylesheet" href="styles/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="bower_components/angular/angular.min.js"></script>
-        <script src="bower_components/angular-route/angular-route.min.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/todoController.js"></script>
+<html lang="en" ng-app="ProjectList">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sherpa Offroad</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Indie Flower" >
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Rock Salt" >
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+<!--     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/projectController.js"></script> -->
+    <script src="flip.js"></script>
 
-    </head>
+</head>
     
-    <body>
+<body>
 
-      <div class="container">
-        <header class="navbar">
-          <h1 class="title">ToDo list Items</h1>
-        </header>
+<div class="hero row">
 
-        <form class="title" ng-submit="submit()" ng-controller="TodoCreateCtrl">
-            <input type="text" ng-model="newTodo.todoItem" placeholder="Todo item" />
-            <input type="submit" id="submit" value="Submit" />
-        </form>
-
-        <div class="col-sm-6 col-md-6 col-lg-4"> </div>
-        <div ng-view class="todo"> </div>
-      
+<!-- Navbar Section -->
+  <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>    
       </div>
-      
-    </body>
+      <div class="center-links">
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-center">
+              <!-- <li><a href='#skills' class="nav-button" >HOME</a></li> -->
+              <li><a href="#bumper" class="nav-button" >BUMPERS</a></li>
+              <li><a href="#coming-soon" class="nav-button">COMING SOON</a></li>
+              <li><a href="#about-us" class="nav-button" >ABOUT US</a></li>
+              <!-- <li><a class="nav-button" href="nick-ursetta-resume.pdf" target="_blank">RESUME</a></li>-->
+              <!-- <li><embed src="nick-ursetta-resume.pdf" width="100%" height="100%"/>Download</li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- About Us Title -->
+  <div id="bumper" class="transition-banner">
+    <div class="banner text-center">BODY ARMOR</div>
+  </div>
+<!-- About Us -->
+  <div class="container-fluid">
+    <div class="row about">
+      <div class="col-md-6 text-center">
+        <img class="picture border text-center" src="bumper.png">
+      </div>
+      <div class="col-md-6 text-center">
+        <div class="about-text">Info about the bumper and a buy now section. Can format however we want.</div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Projects Title -->
+  <div id="coming-soon" class="transition-banner">
+    <div class="banner text-center">COMING SOON</div>
+  </div>
+
+<!-- Project Cards -->
+<div class="project-cards">
+ <!-- Politicator Card -->
+  <div class="card-info">
+      <div class="flip"> 
+          <div class="card"> 
+              <div class="face front"> 
+                  <div class="politicator-div text-center card-header ">
+                      <img id="politicator" src="suspension.png">
+                  </div>
+              </div>
+                  <div class="face back card-header">
+                    <div class="back-top-div">SUSPENSION COMPONENTS</div>
+                    <div class="back-middle-div">Link to view all suspension components</div>
+                    <!-- <div class="github-icons">
+                      <a href="https://github.com/nursetta/politicator" target="blank"><img width="50" height="50" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT9uepPsaErTtnJVHyJe6Dr6QmOmfCjaWnyGs0u7Echl5CItqhg4cDr8A"></a>  
+                    </div>
+                      <div class="card-block">
+                      <a href="http://politicator-app.herokuapp.com/" class="card-link">Live Site</a>
+                      </div> -->
+                  </div> 
+          </div> 
+      </div> 
+<!-- Qualifi Card -->
+      <div class="flip"> 
+          <div class="card"> 
+              <div class="face front"> 
+                  <div class="qualifi-div text-center card-header ">
+                      <img id="qualifi" src="merch.png">
+                  </div>
+              </div>
+                  <div class="face back">
+                    <div class="back-top-div">GEAR</div>
+                    <div class="back-middle-div">Link to page that displays our fresh merch.</div>
+                    <!-- <div class="github-icons">
+                      <a href="https://github.com/nursetta/Final-Project" target="blank"><img width="50" height="50" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT9uepPsaErTtnJVHyJe6Dr6QmOmfCjaWnyGs0u7Echl5CItqhg4cDr8A"></a>  
+                    </div>
+                      <div class="card-block">
+                      <a href="http://qualifi.herokuapp.com/" class="card-link">Live Site</a>
+                      </div> -->
+                  </div> 
+          </div> 
+      </div>
+<!--       <div class="flip"> 
+          <div class="card"> 
+              <div class="face front"> 
+                  <div>VAGABOND</div>
+              </div>
+                  <div class="face back">
+                      <div class="politicator-div text-center card-header ">
+                          <img id="politicator" src="politicator.png">
+                      </div>
+                  </div> 
+          </div> 
+      </div>  -->
+  </div>
+</div>
+
+<!-- About Us Title -->
+  <div id="about-us" class="transition-banner">
+    <div class="banner text-center">ABOUT US</div>
+  </div>
+<!-- About Us -->
+  <div class="container-fluid">
+    <div class="row about">
+      <div class="col-md-6 text-center">
+        <img class="picture border text-center" src="Sherpa_Offroad.png">
+      </div>
+      <div class="col-md-6 text-center">
+        <div class="about-text">Info about the company and how and why you started or whatever other gay thing you want to add. </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Contact Info -->
+<footer id="contact-me" class="contact-me row">
+  <div class="contact-info">
+    <ul class="info text-center">
+      <p>Sherpa Offroad</p>
+      <p>2568 Danbury Lane, Highlands Ranch, CO 80126</p>
+      <p>(720)-365-2487</p>
+      <p>Sherpa-Offroad@gmail.com</p>
+    </ul>
+    
+  </div>
+</footer>    
+
+
+
+    <div ng-view></div>
+
+</body>
 </html>

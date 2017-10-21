@@ -1,13 +1,308 @@
-.title {
-  text-align: center;
+.hero {
+    position: relative;
+    height: 95rem;
+    background: url("../Sherpa_Circle.png") no-repeat center center;
+    /*background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://i.imgur.com/ieyQMQh.jpg") no-repeat center center;*/
+    /*background-size: cover;*/
+    margin: 0, 0, 0, 0;
+    padding: 0, 0, 0, 0;
 }
 
-body {
-  background-color: #89c4f4;
-  font-style: 
+@media (max-width: 736px) {
+  .hero {
+      position: relative;
+      height: 70rem;
+      background: url("../sherpa_circle_small.png") no-repeat center center;
+      /*background-size: cover;*/
+      margin: 0, 0, 0, 0;
+      padding: 0, 0, 0, 0;
+  }
 }
 
-a {
-  font-size: 20pt;
-  color: #E29C45;
+/* Navbar Section */
+
+.center-links {
+    float:none;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    text-align: center;
+    z-index: 1000;
+        background-color: white;
+}
+
+.navbar .navbar-fixed-top{
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom: solid white;
+    z-index: 1000;
+
+} 
+
+.navbar .navbar-white {
+    background-color:#fff;
+    color:#444;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.nav-button {
+    color: #005C44;
+    font-family: 'Bungee Inline', cursive;
+    font-weight: 700;
+    font-size: 24pt;
+}
+
+#myNavbar {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 16px;
+        float:none;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.navbar-header .navbar-toggle {
+    position: relative;
+    float: left;
+    padding: 14px 10px;
+    margin-top: 16px;
+    margin-right: 15px
+    margin-bottom: 10px;
+    background-color: transparent;
+    /*border: 1px solid white;*/
+    border-radius: 4px;
+}
+
+.navbar-header .navbar-toggle .icon-bar{
+    border: 2px solid #005C44;  
+}
+
+/*SKILLS*/
+
+.skills1 {
+    border: thick solid black;
+    background-color: #1BBC9B;
+    height: 150px;
+    width: 150px;
+    margin: 5px 0px 0px 0px;
+}
+.skill-tile1 {
+    margin-top: 40%;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 18pt;
+}
+
+.box1 {
+    display: inline-block;
+}
+
+.skills2 {
+    border: thick solid black;
+    background-color: #1b8dbc;
+    height: 150px;
+    width: 150px;
+    margin: 5px 0px 0px 0px;
+}
+
+.skill-tile2 {
+    margin-top: 40%;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 18pt;
+}
+
+.box2 {
+    display: inline-block;
+}
+
+.skills3 {
+    border: thick solid black;
+    background-color: #1b8dbc;
+    height: 150px;
+    width: 150px;
+    margin: 5px 0px 0px 0px;
+}
+
+.skill-tile3 {
+    margin-top: 16%;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 18pt;
+}
+
+.box3 {
+    display: inline-block;
+}
+
+/*ABOUT ME SECTION*/
+
+.about {
+    background-color: #005C44;
+    padding: 30px 0px 30px 0px;
+}
+
+.border {
+    margin: 20px auto 20px auto;
+    padding: 10px 10px 10px 10px;
+    height: 294px;
+    width: 294px;
+    border: 10px solid white;
+}
+
+
+.picture {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);   
+}
+
+.about-text {
+    margin: 0;
+    padding: 100px 100px 10px 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+  .about-text {
+      margin: 0;
+      padding: 10px 0px 10px 0px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 30px;
+      color: white;
+  }
+}
+
+.banner {
+    margin: 1em 1em 1em 1em;
+    padding: 2em 2em 2em 2em;
+    border-bottom: thick solid black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+}
+
+/*CARD FLIP ANIMATIONS*/
+
+.flip {
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-perspective: 800;
+  -ms-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+   width: 400px;
+   height: 400px;
+   position: relative;
+   margin: 25px 5px;
+   display: inline-block;
+   text-align: center;
+   border: thick solid black;
+
+}
+
+.flip .card.flipped {
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+}
+
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    backface-visibility: hidden;  /* W3C */
+    -webkit-backface-visibility: hidden; /* Safari & Chrome */
+    -moz-backface-visibility: hidden; /* Firefox */
+    -ms-backface-visibility: hidden; /* Internet Explorer */
+    -o-backface-visibility: hidden; /* Opera */
+
+}
+
+.flip .card .front {
+    position: absolute;
+    z-index: 1;
+    background: white;
+    color: #1b8dbc;
+    cursor: pointer;
+}
+
+.flip .card .back {
+    background: blue;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transform:rotatey(-180deg);
+    -ms-transform:rotatey(-180deg); /* IE 9 */
+    -moz-transform:rotatey(-180deg); /* Firefox */
+    -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+    -o-transform:rotatey(-180deg); /* Opera */
+
+}
+
+.back-top-div {
+    text-decoration: underline;
+    height:70px;
+    width:390px`;
+}
+
+.back-middle-div {
+    margin-top: 60px;
+    font-size: 16pt;
+    height:200px;
+    width:390px;
+}
+
+.card-info {
+   text-align: center;
+}
+
+#politicator {
+    width: 390px;
+    height: 390px;
+}
+
+#qualifi {
+    width: 390px;
+    height: 390px;
+}
+
+.contact-me {
+    border-top: thick solid black;
+    background-color: #fff;
+    padding: 0;
+}
+
+.info {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
 }

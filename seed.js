@@ -1,30 +1,27 @@
 var db = require('./models');
 
-var todos= [
+var projects= [
   {
-  todoItem: "Clean the House",
+  project: "Qualifi",
 },
   {
-  todoItem: "Do Laundry",
+  project: "Politicator",
 },
   {
-  todoItem: "Wash car",
-},
-  {
-  todoItem: "Go to the Gym",
+  project: "Project 4",
 }
 
 ];
 
-db.Todo.remove({}, function(err, movies){
+db.Project.remove({}, function(err, project){
 	if (err) { return console.log ('err', err); 
 	} else {
 		console.log('removed all items');
 
-	db.Todo.create(todos, function (err, movies){
+	db.Project.create(projects, function (err, project){
 		if (err) { return console.log ('error:', err);
 	}
-		console.log("created", todos.length, "items");
+		console.log("created", projects.length, "projects");
 		process.exit();
 		});
 	}
